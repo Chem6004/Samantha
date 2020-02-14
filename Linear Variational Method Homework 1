@@ -1,0 +1,63 @@
+#1.Is the energy you calculated above higher or lower than the ground state energy of the ordinary particle in a box system (without the delta function potential)?
+#Answer 1: The energy that was calculated was higher than the ground state energy of 
+#the ordinary particle in a box system
+
+#2.  Why do you think mixing in functions that correspond to excited states in the ordinary particle in a box system actually helped to improve (i.e. lower) your energy in the system with the delta function potential?
+#Answer 2: Mixing functions that correspond to excited states in the ordinary particle in a box system improves the energy in the system.
+#Since the energy of any approximate trial function is always above the true energy, then any variations in the trial functions
+#with the mixed functional will lower its energy. Therefore, making the approximate energy closer to the exact answer. 
+
+#3.  Increase the number of basis functions to 6 (so that ${\bf H}$ is a 6x6 matrix and ${\bf c}$ is a vector with 6 entries) and repeat your calculation of the variational estimate of the ground state energy.  Does the energy improve (lower) compared to what it was when 3 basis functions were used?
+
+#Answer 3:The energy of 6 basis functions improves (lowers) compared to the energy when 3 basis functions are used. See solution below. 
+
+import numpy as np
+
+def H_ij(i, j):
+
+    ham_int = 0
+    if i==j:
+        ham_int = j**2 * np.pi**2/(2 * L**2) + 2/L * np.sin(i * np.pi *5 /L) * np.sin(j * np.pi *5 / L)
+    else:
+        ham_int = 2/L * np.sin(i * np.pi *5 /L) * np.sin(j * np.pi *5 / L)
+        ### code to evaluate H_ij here!
+    return ham_int
+
+L = 10
+
+H_mat = np.zeros((6, 6))
+##print(H_mat)
+
+for i in range(1,4):
+    for j in range(1,4):
+        H_mat[i-1][j-1] = H_ij(i, j)
+print(H_mat)
+
+
+
+c = np.zeros(6)
+c[2] = 1
+print("This is the c vector")
+print(c)
+
+Hc = np.dot(H_mat,c)
+print("This is H * the c vector")
+print(Hc)
+
+print("This is c transpose")
+print(np.transpose(c))
+
+E = np.dot(np.transpose(c),Hc)
+
+
+print("This is the energy functional value")
+print(E)
+
+
+E_opt, c_opt = np.linalg.eig(H_mat)
+
+
+print(E_opt[0])
+
+
+print(c_opt[0])
