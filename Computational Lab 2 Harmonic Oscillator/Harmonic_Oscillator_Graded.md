@@ -1,8 +1,8 @@
 - Submission on time: Yes -> 100%
 - Submission complete (All questions answered, code used to support answers): Yes -> 100%
-- Question 1 Answered Accurately:
-- Question 2 Answered Accurately: 
-- Question 3 Answered Accurately: 
-- Question 4 Answered Accurately: 
-- Cumulative Accuracy for questions:
-- Final Grade for Orientation is 1/3(On Time + Complete + Accuracy) = 
+- Question 1 Answered Accurately: Yes -> 100%
+- Question 2 Answered Accurately: Partially -> 50%
+- Question 3 Answered Accurately: Partially -> 75% (wrong value but consistent with value of alpha = 0.6)
+- Question 4 Answered Accurately: Partially -> 75% (wrong value but consistent with value of alpha = 0.6)
+- Cumulative Accuracy for questions: 75%
+- Final Grade for Orientation is 1/3(On Time + Complete + Accuracy) = 91.6%
