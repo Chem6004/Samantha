@@ -1,1 +1,8 @@
-
+- Submission on time: Yes -> 100%
+- Question 1: 18/20 (part b needs justification/explanation)
+- Question 2 20/20
+- Question 3 20/20
+- Question 4 20/20
+- Question 5 10/20 (answer does not address computational scaling of MP2 equations)
+- Cumulative Accuracy for questions:  88%
+- Final Grade for Orientation is 1/2(On Time + Accuracy) = 94%
